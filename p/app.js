@@ -23,15 +23,6 @@ app.use('/aha', proxy('funny.aha.taipei', {
   }
 }));
 
-app.use('/bluemix', proxy('joyce-cambrian.mybluemix.net', {
-  forwardPath: function(req, res) {
-    return require('url').parse(req.url).path;
-  }
-}));
-
-
-
-
 app.listen(3002, function () {
   console.log('Example app listening on port 3002!');
 });
